@@ -114,6 +114,10 @@ li.done {
 
 /* -------------------- Responsive Design -------------------- */
 @media (max-width: 500px) {
+  body {
+    padding: 30px 15px; /* Etwas weniger Padding */
+  }
+
   .app-container {
     padding: 20px;
   }
@@ -122,13 +126,36 @@ li.done {
     font-size: 1.5rem;
   }
 
-  input[type="text"],
-  button {
-    width: 100%;
-    font-size: 1rem;
-  }
-
   form {
     flex-direction: column;
+    gap: 0; /* Entfernt horizontalen Zwischenraum */
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+  }
+}
+
+/* Optional: Extra kleiner Screen (z. B. altes iPhone SE) */
+@media (max-width: 360px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  button,
+  input[type="text"] {
+    font-size: 1rem;
   }
 }
